@@ -38,12 +38,12 @@ angular.module('Teem')
 
       var annotations = {};
 
-      function imgWidget(parentElement, before, state) {
-        state = state || before;
+        function imgWidget(parentElement, before, state) {
+          state = state || before;
 
-        if (!(state in $scope.project.attachments) || !$scope.project.attachments[state].file) {
-          return;
-        }
+          if (!(state in $scope.project.attachments) || !$scope.project.attachments[state].file) {
+            return;
+          }
 
         // cannot use spinner template directly here
         parentElement.innerHTML = `
